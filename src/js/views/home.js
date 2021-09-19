@@ -1,12 +1,14 @@
 import React from "react";
 import "../../styles/home.scss";
 import { BsCalendar } from "react-icons/bs";
+import { Search } from "../component/Search";
 
 export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>
-			<BsCalendar className="mr-1" />
+	<div className="container mx-auto mt-3 font-thin">
+		<h1 className="text-5xl ml-2">
+			<BsCalendar className="inline-block text-red-400 align-top mr-2" />
 			Appointment App
 		</h1>
+		<Search />
 	</div>
 );
