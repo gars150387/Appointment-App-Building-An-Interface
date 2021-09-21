@@ -1,4 +1,4 @@
-const Appointment = [
+export const Appointment = [
 	{
 		id: "0",
 		petName: "Pepe",
@@ -175,5 +175,3 @@ const Appointment = [
 		aptDate: "2018-12-2 9:00"
 	}
 ];
-
-export default Appointment;

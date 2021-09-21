@@ -7,7 +7,7 @@ export const AppointmentInfo = () => {
 	return (
 		<>
 			<button
-				className="col-12 mt-4 mb-0 bg-primary"
+				className="col-12 rounded bd-solid-dark mt-4 mb-0 bg-secondary"
 				onClick={() => setTogglerAppointmentInfo(!togglerAppointmentInfo)}>
 				<b>Appointments Information</b>
 			</button>

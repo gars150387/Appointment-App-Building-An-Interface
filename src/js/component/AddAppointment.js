@@ -11,7 +11,7 @@ export const AddAppointment = () => {
 				</div>
 			</button>
 			{toggle ? (
-				<div className="border-r-2 border-b-2 border-l-2 border-light-blue-500 rounded-b-md pl-4 pr-4 pb-4">
+				<div className="col-12 bd-rounded-2 bd-b-2 bd-l-2 bd-light-blue rounded-b-md pl-4 pr-4 pb-4">
 					<div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
 						<label htmlFor="ownerName" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
 							Owner Name

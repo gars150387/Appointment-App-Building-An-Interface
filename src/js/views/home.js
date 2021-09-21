@@ -7,12 +7,13 @@ import { AppointmentList } from "../component/AppointmentList";
 import { element } from "prop-types";
 
 export const Home = props => (
-	<div className="container mx-auto mt-3">
-		<div className="row inline">
-			<h1 className="text-5xl ml-2 font-thin">
-				<div>
-					<i className="far fa-calendar-times inline-block text-red-400 align-top mr-4" />
-				</div>
+	<div className="container mt-3">
+		<div className="row d-inline text-center">
+			<h1 className="text-5xl font-thin ml-2">
+				<i
+					className="far fa-calendar-times inline-block text-danger align-center"
+					style={{ marginRight: "10px" }}
+				/>
 				Appointment App
 			</h1>
 		</div>

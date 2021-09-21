@@ -4,7 +4,7 @@ import { Dropdown } from "./Dropdown";
 export const Search = () => {
 	const [toggleSearch, setToggleSearch] = useState(toggleSearch);
 	return (
-		<div className="container-fluid mt-4 items-align-center">
+		<div className="container-fluid rounded bd-solid-dark bg-primary mt-4 items-align-center">
 			<div className="row rounded bd-solid-black bg-blue d-flex-inline">
 				{/* <div className="col absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 					<label htmlFor="query" className="sr-only" />
