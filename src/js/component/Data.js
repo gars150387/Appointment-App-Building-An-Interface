@@ -1,4 +1,4 @@
-const AppointmentList = [
+const Appointment = [
 	{
 		id: "0",
 		petName: "Pepe",
@@ -176,4 +176,4 @@ const AppointmentList = [
 	}
 ];
 
-export default AppointmentList;
+export default Appointment;
