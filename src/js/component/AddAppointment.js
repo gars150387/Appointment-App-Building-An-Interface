@@ -5,9 +5,7 @@ export const AddAppointment = () => {
 	const [toggle, setToggle] = useState(toggle);
 	return (
 		<div>
-			<button
-				className="bg-blue-400 text-white px-2 py-3 w-full text-left rounded-t-md"
-				onClick={() => setToggle(!toggle)}>
+			<button className="col-12 rounded bd-solid-black bg-blue" onClick={() => setToggle(!toggle)}>
 				<div>
 					<i className="fas fa-calendar-plus inline-block align-text-top" /> Add Appointment
 				</div>

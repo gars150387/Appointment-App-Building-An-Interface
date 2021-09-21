@@ -1,5 +1,6 @@
 import { Appointment } from "./Data";
 import React, { useState } from "react";
+import { Modal } from "./Modal";
 
 const appointment = [
 	{
@@ -180,6 +181,7 @@ const appointment = [
 ];
 
 export const AppointmentList = () => {
+	const [modal, setModal] = useState(false);
 	return (
 		<>
 			{appointment.map(element => {
@@ -187,7 +189,10 @@ export const AppointmentList = () => {
 					<ul className="list-group lis-group-flush" key={element.id}>
 						<button
 							type="button"
-							className="p-1.5 mr-1.5 mt-1 rounded text-white bg-danger-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+							className="p-1.5 mr-1.5 mt-1 rounded text-white bg-danger-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+							data-toggle="modal"
+							data-target="#exampleModal"
+							onClick={() => setModal(true)}>
 							<i className="fas fa-trash" />
 						</button>
 						<li className="list-group-item">

@@ -2,9 +2,11 @@ import React from "react";
 // import "../../styles/home.scss";
 import { Search } from "../component/Search";
 import { AddAppointment } from "../component/AddAppointment";
+import { AppointmentInfo } from "../component/AppointmentInfo";
 import { AppointmentList } from "../component/AppointmentList";
+import { element } from "prop-types";
 
-export const Home = () => (
+export const Home = props => (
 	<div className="container mx-auto mt-3">
 		<div className="row inline">
 			<h1 className="text-5xl ml-2 font-thin">
@@ -15,7 +17,7 @@ export const Home = () => (
 			</h1>
 		</div>
 		<AddAppointment />
-		<Search />
-		<AppointmentList className="mt-2" />
+		<Search className="mt-4" />
+		<AppointmentInfo className="mt-2" />
 	</div>
 );
