@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/home.scss";
 import { BsCalendar } from "react-icons/bs";
 import { Search } from "../component/Search";
+import { AddAppointment } from "../component/AddAppointment";
 
 export const Home = () => (
 	<div className="container mx-auto mt-3">
@@ -13,7 +14,7 @@ export const Home = () => (
 				Appointment App
 			</h1>
 		</div>
-
+		<AddAppointment />
 		<Search />
 	</div>
 );

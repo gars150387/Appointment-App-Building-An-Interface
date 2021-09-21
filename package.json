@@ -77,9 +77,13 @@
 		]
 	},
 	"dependencies": {
+		"@syncfusion/ej2-react-calendars": "^19.2.62",
 		"bootstrap": "^5.1.1",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
+		"react-calendar": "^3.4.0",
+		"react-datepicker": "^4.2.1",
+		"react-datetime-picker": "^3.4.0",
 		"react-dom": "^16.8.4",
 		"react-icons": "^4.2.0",
 		"react-polyfills": "0.0.1",
