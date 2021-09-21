@@ -25,9 +25,9 @@ export const Search = () => {
 							className="justify-center px-4 py-2 bg-blue-400 border-2 border-blue-400 text-sm text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 flex items-center"
 							id="options-menu"
 							aria-haspopup="true"
-							aria-expanded="true">
-							Sort By{" "}
-							<i className="fas fa-caret-down ml-2" onClick={() => setToggleSearch(!toggleSearch)} />
+							aria-expanded="true"
+							onClick={() => setToggleSearch(!toggleSearch)}>
+							Sort By <i className="fas fa-caret-down ml-2" />
 						</button>
 						{toggleSearch && <Dropdown />}
 					</div>

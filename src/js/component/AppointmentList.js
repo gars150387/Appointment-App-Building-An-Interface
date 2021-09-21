@@ -190,13 +190,22 @@ export const AppointmentList = () => {
 							className="p-1.5 mr-1.5 mt-1 rounded text-white bg-danger-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
 							<i className="fas fa-trash" />
 						</button>
-						<li className="list-group-item">{element.petName}</li>
-						<li className="list-group-item">{element.aptDate}</li>
+						<li className="list-group-item">
+							<b>Pet: </b>
+							{element.petName}
+						</li>
+						<li className="list-group-item">
+							<b>Date: </b>
+							{element.aptDate}
+						</li>
 						<li className="list-group-item">
 							<b>Owner: </b>
 							{element.ownerName}
 						</li>
-						<li className="list-group-item">{element.aptNotes}</li>
+						<li className="list-group-item">
+							<b>Notes: </b>
+							{element.aptNotes}
+						</li>
 					</ul>
 				);
 			})}
