@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dropdown } from "./Dropdown";
 
 export const Search = () => {
+	const [toggleSearch, setToggleSearch] = useState(toggleSearch);
 	return (
 		<div className="py-5">
 			<div className="mt-1 relative rounded-md shadow-sm">
@@ -25,9 +26,10 @@ export const Search = () => {
 							id="options-menu"
 							aria-haspopup="true"
 							aria-expanded="true">
-							Sort By <i className="fas fa-caret-down ml-2" />
+							Sort By{" "}
+							<i className="fas fa-caret-down ml-2" onClick={() => setToggleSearch(!toggleSearch)} />
 						</button>
-						<Dropdown />
+						{toggleSearch && <Dropdown />}
 					</div>
 				</div>
 			</div>
