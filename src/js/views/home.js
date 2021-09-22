@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Search } from "../component/Search";
 import { AddAppointment } from "../component/AddAppointment";
 import { AppointmentInfo } from "../component/AppointmentInfo";
 import appointmentList from "../data.json";
 
 export const Home = props => {
+	// const [appointmentList, setAppointmentList] = useState([]);
+
+	// const fetchData = useCallback(() => {
+	// 	fetch("../data.json")
+	// 		.then(response => response.json())
+	// 		.then(data => {
+	// 			setAppointmentList(data);
+	// 		});
+	// }, []);
+
+	// useEffect(
+	// 	() => {
+	// 		fetchData();
+	// 	},
+	// 	[fetchData]
+	// );
+
 	return (
 		<div className="container mt-3">
 			<div className="row d-inline text-center">
@@ -18,7 +35,9 @@ export const Home = props => {
 			</div>
 			<AddAppointment />
 			<Search className="mt-4" />
-
+			<div>
+				<h2 className="text-center bg-secondary bd-rounded-solid-1px mt-4">Appointment Information</h2>
+			</div>
 			<ul className="list-group lis-group-flush">
 				{appointmentList.map(appointment => {
 					console.log("appointment", appointment);
