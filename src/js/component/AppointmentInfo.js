@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export const AppointmentInfo = ({ appointment }) => {
+export const AppointmentInfo = ({ appointment,onDeleteAppointment }) => {
 	return (
 		<div className="mt-2 mb-2">
 			<li className="list-group-item d-flex justify-content-between">
@@ -11,7 +11,9 @@ export const AppointmentInfo = ({ appointment }) => {
 				</div>
 				<button
 					type="button"
-					className="p-1.5 mr-1.5 mt-1 rounded text-white bg-danger hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+					onClick={() => onDeleteAppointment(appointment.id)}
+					className="p-1.5 mr-1.5 mt-1 rounded text-white bg-danger hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" 
+					>
 					<i className="fas fa-trash" />
 				</button>
 			</li>
