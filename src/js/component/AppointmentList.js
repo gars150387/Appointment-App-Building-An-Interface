@@ -1,8 +1,6 @@
-import { Data } from "./Data";
-import React, { useState } from "react";
-import { object } from "prop-types";
+import React from "react";
 
-const appointment = [
+let appointment = [
 	{
 		id: "0",
 		petName: "Pepe",
@@ -179,11 +177,11 @@ const appointment = [
 		aptDate: "2018-12-2 9:00"
 	}
 ];
-
-export const AppointmentList = () => {
+export const AppointmentList = props => {
 	return (
 		<>
 			{appointment.map(element => {
+				console.log("appointments", appointment);
 				return (
 					<ul className="list-group lis-group-flush" key={element.id}>
 						<button

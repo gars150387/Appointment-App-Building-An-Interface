@@ -1,10 +1,7 @@
 import React from "react";
-// import "../../styles/home.scss";
 import { Search } from "../component/Search";
 import { AddAppointment } from "../component/AddAppointment";
 import { AppointmentInfo } from "../component/AppointmentInfo";
-import { AppointmentList } from "../component/AppointmentList";
-import { element } from "prop-types";
 
 export const Home = props => (
 	<div className="container mt-3">

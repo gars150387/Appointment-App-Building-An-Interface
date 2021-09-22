@@ -27,8 +27,6 @@ export const Search = () => {
 					Sort By <i className="fas fa-caret-down ml-2" />
 				</button>
 				{toggleSearch && <Dropdown />}{" "}
-				{/* <div className="absolute inset-y-0 right-0 flex items-center">
-				</div> */}
 			</div>
 		</div>
 	);

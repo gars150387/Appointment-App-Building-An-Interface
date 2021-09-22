@@ -1,4 +1,4 @@
-export const Appointment = [
+export const appointment = [
 	{
 		id: "0",
 		petName: "Pepe",
@@ -175,3 +175,5 @@ export const Appointment = [
 		aptDate: "2018-12-2 9:00"
 	}
 ];
+
+

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import DateTimePicker from "react-datetime-picker";
 
 export const AddAppointment = () => {
 	const [toggle, setToggle] = useState(toggle);
