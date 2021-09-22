@@ -1,17 +1,34 @@
 import React, { useState } from "react";
-import { AppointmentList } from "./AppointmentList";
+import PropTypes from "prop-types";
 
-export const AppointmentInfo = () => {
-	const [togglerAppointmentInfo, setTogglerAppointmentInfo] = useState(togglerAppointmentInfo);
-
+export const AppointmentInfo = ({ appointment }) => {
 	return (
-		<>
+		<div>
 			<button
-				className="col-12 rounded bd-solid-dark mt-4 mb-0 bg-secondary"
-				onClick={() => setTogglerAppointmentInfo(!togglerAppointmentInfo)}>
-				<b>Appointments Information</b>
+				type="button"
+				className="p-1.5 mr-1.5 mt-1 rounded text-white bg-danger hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+				<i className="fas fa-trash" />
 			</button>
-			{togglerAppointmentInfo && <AppointmentList />}
-		</>
+			<li className="list-group-item">
+				<b>Pet: </b>
+				{appointment.petName}
+			</li>
+			<li className="list-group-item">
+				<b>Date: </b>
+				{appointment.aptDate}
+			</li>
+			<li className="list-group-item">
+				<b>Owner: </b>
+				{appointment.ownerName}
+			</li>
+			<li className="list-group-item">
+				<b>Notes: </b>
+				{appointment.aptNotes}
+			</li>
+		</div>
 	);
+};
+
+AppointmentInfo.propTypes = {
+	appointment: PropTypes.object
 };
