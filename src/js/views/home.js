@@ -5,22 +5,7 @@ import { AppointmentInfo } from "../component/AppointmentInfo";
 import appointmentList from "../data.json";
 
 export const Home = props => {
-	// const [appointmentList, setAppointmentList] = useState([]);
-
-	// const fetchData = useCallback(() => {
-	// 	fetch("../data.json")
-	// 		.then(response => response.json())
-	// 		.then(data => {
-	// 			setAppointmentList(data);
-	// 		});
-	// }, []);
-
-	// useEffect(
-	// 	() => {
-	// 		fetchData();
-	// 	},
-	// 	[fetchData]
-	// );
+	const [appointment, setAppointment] = useState([]);
 
 	return (
 		<div className="container mt-3">
@@ -41,9 +26,33 @@ export const Home = props => {
 			<ul className="list-group lis-group-flush">
 				{appointmentList.map(appointment => {
 					console.log("appointment", appointment);
-					return <AppointmentInfo className="mt-2" key={appointment.id} appointment={appointment} />;
+					return (
+						<AppointmentInfo
+							className="mt-2"
+							key={appointment.id}
+							appointment={appointment}
+							onDeleteAppointment={appointmentId => setAppointment(appointment.id !== appointmentId)}
+						/>
+					);
 				})}
 			</ul>
 		</div>
 	);
 };
+
+// const [appointmentList, setAppointmentList] = useState([]);
+
+// const fetchData = useCallback(() => {
+// 	fetch("../data.json")
+// 		.then(response => response.json())
+// 		.then(data => {
+// 			setAppointmentList(data);
+// 		});
+// }, []);
+
+// useEffect(
+// 	() => {
+// 		fetchData();
+// 	},
+// 	[fetchData]
+// );
