@@ -2,11 +2,10 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Search } from "../component/Search";
 import { AddAppointment } from "../component/AddAppointment";
 import { AppointmentInfo } from "../component/AppointmentInfo";
+import { Counter } from "../component/Counter";
 import appointmentList from "../data.json";
 
 export const Home = props => {
-	const [appointment, setAppointment] = useState([]);
-
 	return (
 		<div className="container mt-3">
 			<div className="row d-inline text-center">
@@ -23,6 +22,7 @@ export const Home = props => {
 			<div>
 				<h2 className="text-center bg-secondary bd-rounded-solid-1px mt-4">Appointment Information</h2>
 			</div>
+			<Counter className="justify-content-right" />
 			<ul className="list-group lis-group-flush">
 				{appointmentList.map(appointment => {
 					console.log("appointment", appointment);
@@ -31,7 +31,11 @@ export const Home = props => {
 							className="mt-2"
 							key={appointment.id}
 							appointment={appointment}
-							onDeleteAppointment={appointmentId => setAppointment(appointment.id !== appointmentId)}
+							// onDeleteAppointment={appointmentId =>
+							// 	setAppointmentList(
+							// 		appointmentList.filter(appointmentId => appointment.id !== appointmentId)
+							// 	)
+							// }
 						/>
 					);
 				})}
@@ -40,12 +44,11 @@ export const Home = props => {
 	);
 };
 
-// const [appointmentList, setAppointmentList] = useState([]);
-
 // const fetchData = useCallback(() => {
 // 	fetch("../data.json")
 // 		.then(response => response.json())
 // 		.then(data => {
+// 			console.log("data", data);
 // 			setAppointmentList(data);
 // 		});
 // }, []);

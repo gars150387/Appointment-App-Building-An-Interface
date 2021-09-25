@@ -11,7 +11,7 @@ export const AppointmentInfo = ({ appointment, onDeleteAppointment }) => {
 				</div>
 				<button
 					type="button"
-					onClick={(() => onDeleteAppointment(appointment.id), console.log("deleted", onDeleteAppointment()))}
+					// onClick={(() => onDeleteAppointment(appointment.id), console.log("deleted", onDeleteAppointment()))}
 					className="p-1.5 mr-1.5 mt-1 rounded text-white bg-danger hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
 					<i className="fas fa-trash" />
 				</button>
