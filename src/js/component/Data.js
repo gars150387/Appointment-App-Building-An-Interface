@@ -1,4 +1,4 @@
-export const appointment = [
+module.exports= [
 	{
 		id: "0",
 		petName: "Pepe",
