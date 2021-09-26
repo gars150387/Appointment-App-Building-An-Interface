@@ -21,10 +21,10 @@ export const Home = props => {
 			<div>
 				<h2 className="text-center bg-secondary bd-rounded-solid-1px mt-4">Appointment Information</h2>
 			</div>
-			<div className="card-body">
-				{appointmentList ? `Total Appointments: ${appointmentList.lenght}` : "No Appointments registered"}
+			<>
+				{appointmentList !== 1 ? `Total Appointments: ${appointmentList.lenght}` : "No Appointments registered"}
 				{console.log("list", appointmentList.length)}
-			</div>
+			</>
 			<ul className="list-group lis-group-flush">
 				{appointmentList.map(appointment => {
 					console.log("appointment", appointment);
