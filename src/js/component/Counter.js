@@ -4,7 +4,7 @@ import appointmentList from "../data.json";
 export const Counter = () => {
 	return (
 		<div className="card-body">
-			{appointmentList !== 0 ? `Total Appointments: ${appointmentList.lenght}` : "No Appointments registered"}
+			{appointmentList !== 0 ? `Total Appointments: ${appointmentList.length}` : "No Appointments registered"}
 		</div>
 	);
 };

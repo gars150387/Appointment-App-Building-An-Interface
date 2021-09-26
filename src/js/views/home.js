@@ -2,7 +2,6 @@ import React from "react";
 import { Search } from "../component/Search";
 import { AddAppointment } from "../component/AddAppointment";
 import { AppointmentInfo } from "../component/AppointmentInfo";
-import { Counter } from "../component/Counter";
 import appointmentList from "../data.json";
 
 export const Home = props => {
@@ -22,23 +21,20 @@ export const Home = props => {
 			<div>
 				<h2 className="text-center bg-secondary bd-rounded-solid-1px mt-4">Appointment Information</h2>
 			</div>
-			{/* <div className="card-body">
-				{appointmentList !== null
-					? `Total Appointments: ${appointmentList.lenght}`
-					: "No Appointments registered"}
-			</div> */}
+			<div className="card-body">
+				{appointmentList ? `Total Appointments: ${appointmentList.lenght}` : "No Appointments registered"}
+				{console.log("list", appointmentList.length)}
+			</div>
 			<ul className="list-group lis-group-flush">
 				{appointmentList.map(appointment => {
 					console.log("appointment", appointment);
 					return (
 						<>
-							{appointmentList == null
-								? `Total Appointments: ${appointmentList.lenght}`
-								: "No Appointments registered"}
 							<AppointmentInfo
-								className="mt-2"
 								key={appointment.id}
+								className="mt-2"
 								appointment={appointment}
+
 								// onDeleteAppointment={appointmentId =>
 								// 	setAppointmentList(
 								// 		appointmentList.filter(appointmentId => appointment.id !== appointmentId)

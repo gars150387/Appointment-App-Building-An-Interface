@@ -3,6 +3,7 @@ import { Dropdown } from "./Dropdown";
 
 export const Search = () => {
 	const [toggleSearch, setToggleSearch] = useState(toggleSearch);
+	const [input, setInput] = useState("");
 	return (
 		<div className="container-fluid rounded bd-solid-dark bg-primary mt-4 items-align-center">
 			<div className="row rounded bd-solid-black bg-blue d-flex-inline">
@@ -16,6 +17,7 @@ export const Search = () => {
 					value=""
 					className="col-10 pl-8 rounded-md focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300"
 					placeholder="Search"
+					onChange={e => setInput(e.target.value)}
 				/>
 				<button
 					type="button"
