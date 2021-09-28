@@ -22,7 +22,7 @@ export const Home = props => {
 				<h2 className="text-center bg-secondary bd-rounded-solid-1px mt-4">Appointment Information</h2>
 			</div>
 			<>
-				{appointmentList !== NaN
+				{appointmentList.lenght !== 0
 					? `Total Appointments: ${appointmentList.lenght}`
 					: "No Appointments registered"}
 				{console.log("list", appointmentList.length)}
