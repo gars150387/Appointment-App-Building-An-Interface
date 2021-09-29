@@ -23,27 +23,17 @@ export const Home = props => {
 				<h2 className="text-center bg-secondary bd-rounded-solid-1px mt-4">Appointment Information</h2>
 			</div>
 			<>
-				{appointmentData.length > 0
-					? `Total Appointments: ${appointmentData.length}`
+				{AppointmentData.length > 0
+					? `Total Appointments: ${AppointmentData.length}`
 					: "No Appointments registered"}
-				{console.log("Data", appointmentData.length)}
+				{console.log("Data", AppointmentData.length)}
 			</>
 			<ul className="list-group lis-group-flush">
-				{appointmentData.map(appointment => {
+				{AppointmentData.map(appointment => {
 					console.log("appointment", appointment);
 					return (
 						<>
-							<AppointmentInfo
-								key={appointment.id}
-								className="mt-2"
-								appointment={appointment}
-
-								// onDeleteAppointment={appointmentId =>
-								// 	setAppointmentList(
-								// 		appointmentList.filter(appointmentId => appointment.id !== appointmentId)
-								// 	)
-								// }
-							/>
+							<AppointmentInfo key={appointment.id} className="mt-2" appointment={appointment} />
 						</>
 					);
 				})}
