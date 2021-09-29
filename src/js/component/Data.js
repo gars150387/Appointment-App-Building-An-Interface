@@ -1,4 +1,4 @@
-module.exports= [
+export const AppointmentData = [
 	{
 		id: "0",
 		petName: "Pepe",
@@ -175,5 +175,3 @@ module.exports= [
 		aptDate: "2018-12-2 9:00"
 	}
 ];
-
-

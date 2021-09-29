@@ -2,7 +2,8 @@ import React from "react";
 import { Search } from "../component/Search";
 import { AddAppointment } from "../component/AddAppointment";
 import { AppointmentInfo } from "../component/AppointmentInfo";
-import appointmentList from "../data.json";
+// import appointmentList from "../data.json";
+import { AppointmentData } from "../component/Data";
 
 export const Home = props => {
 	return (
@@ -22,13 +23,13 @@ export const Home = props => {
 				<h2 className="text-center bg-secondary bd-rounded-solid-1px mt-4">Appointment Information</h2>
 			</div>
 			<>
-				{appointmentList.lenght !== 0
-					? `Total Appointments: ${appointmentList.lenght}`
+				{appointmentData.length > 0
+					? `Total Appointments: ${appointmentData.length}`
 					: "No Appointments registered"}
-				{console.log("list", appointmentList.length)}
+				{console.log("Data", appointmentData.length)}
 			</>
 			<ul className="list-group lis-group-flush">
-				{appointmentList.map(appointment => {
+				{appointmentData.map(appointment => {
 					console.log("appointment", appointment);
 					return (
 						<>
