@@ -29,7 +29,18 @@ export const Home = props => {
 				{console.log("Data", AppointmentData.length)}
 			</>
 			<ul className="list-group lis-group-flush">
-				{AppointmentData.map(appointment => {
+				{AppointmentData.filter(appointment => {
+					if (appointment) {
+						return (
+							appointment.petName.toLocaleLowerCase().includes() ||
+							appointment.ownerName.toLocaleLowerCase().includes() ||
+							appointment.aptDate.toLocaleLowerCase().includes() ||
+							appointment.aptNotes.toLocaleLowerCase().includes()
+						);
+					} else {
+						return "";
+					}
+				}).map(appointment => {
 					console.log("appointment", appointment);
 					return (
 						<>
