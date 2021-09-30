@@ -39,7 +39,7 @@ export const Home = props => {
 				// 			appointment.aptNotes.toLocaleLowerCase().includes()
 				// 		);
 				// 	} else {
-						return "";
+						// return "";
 				// 	}
 				// })
 				.map(appointment => {
